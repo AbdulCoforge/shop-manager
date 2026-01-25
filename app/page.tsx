@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      hii
+    <div className="flex justify-center items-center h-screen w-screen">
+      hiigrry
     </div>
   );
 }
