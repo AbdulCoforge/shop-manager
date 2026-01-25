@@ -34,35 +34,37 @@
 }
 
 @theme inline {
-  
-    /* Backgrounds */
-  --color-background: var(--white-100);
-  --color-bg-primary: var(--blue-50);
-  --color-bg-secondary: var(--purple-50);
-  --color-bg-tertiary: var(--green-50);
 
-  /* Brand / primary colors */
-  --color-primary: var(--blue-500);
-  --color-secondary: var(--purple-500);
-  --color-tertiary: var(--green-500);
-  --color-error: var(--red-400);
+  /* Background colors */
+  --background-color: var(--white-100);
+  --primary-bg-color: var(--blue-50);
+  --secondary-bg-color: var(--purple-50);
+  --tertiary-bg-color: var(--green-50);
 
-  /* Soft / secondary grades */
-  --color-primary-soft: var(--gray-100);
-  --color-secondary-soft: var(--orange-300);
-  --color-tertiary-soft: var(--green-300);
+  /* First Grade colors */
+  --primary-color: var(--blue-500);
+  --secondary-color: var(--purple-500);
+  --tertiary-color: var(--green-500);
+  --error-color: var(--red-400);
 
-  /* State backgrounds */
-  --color-success-bg: var(--green-100);
-  --color-warning-bg: var(--orange-100);
+  /* Second Grade colors */
+  --sg-primary-color: var(--gray-100);
+  --sg-secondary-color: var(--orange-300);
+  --sg-tertiary-color: var(--green-300);
+
+  /* Third Grade colors */
+  --success-transparent-color: var(--green-100);
+  --warning-transparent-color: var(--orange-100);
 
   /* Text colors */
-  --color-text-primary: var(--gray-950);
-  --color-text-secondary: var(--white-100);
-  --color-text-tertiary: var(--gray-400);
-  --color-text-success: var(--green-500);
-  --color-text-warning: var(--orange-500);
+  --primary-text-color: var(--gray-950);
+  --secondary-text-color: var(--white-100);
+  --tertiary-text-color: var(--gray-400);
+  --success-text-color: var(--green-500);
+  --warning-text-color: var(--orange-500);
+  
 }
+
 
 body {
   background: var(--background-color);
