@@ -8,7 +8,9 @@ export default function Home() {
     <div className="flex justify-center items-center h-screen w-screen">
         hii
         <InputField className=" w-1/2" type="password"/>
-        <AdvanceButton className=""><FaPlus className="bg-red-500"/>Click Me</AdvanceButton>
+        <AdvanceButton variant="primary" className=""><FaPlus className=""/>Click Me</AdvanceButton>
+        <AdvanceButton variant="secondary" className=""><FaPlus className=""/>Click Me</AdvanceButton>
+        <AdvanceButton variant="tertiary" className=""><FaPlus className=""/>Click Me</AdvanceButton>
     </div>
   );
 }

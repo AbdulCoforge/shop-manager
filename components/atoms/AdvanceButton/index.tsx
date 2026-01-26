@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 
 interface AdvanceButtonTypes{
-    variant?: "link" | "secondary" | "outline" | "default" | "primary" | "ghost";
+    variant?:  "secondary" | "tertiary" | "primary" ;
     className?: string;
     children?: string | React.ReactNode;
 }
