@@ -1,24 +1,17 @@
-import { Button } from "@/components/ui/button"
+import * as React from "react";
+import { Button } from "@/components/ui/button";
 
-interface AdvanceButtonTypes{
-    variant?:  "secondary" | "tertiary" | "primary" ;
-    className?: string;
-    children?: string | React.ReactNode;
+type AdvanceButtonProps = React.ComponentProps<typeof Button>;
+
+export default function AdvanceButton({
+  variant = "primary",
+  className,
+  children,
+  ...props
+}: AdvanceButtonProps) {
+  return (
+    <Button variant={variant} className={className} {...props}>
+      {children}
+    </Button>
+  );
 }
-
-export default function AdvanceButton ({
-    variant = "primary",
-    className,
-    children,
-    ...props
-}: AdvanceButtonTypes){
-    return(
-        <Button
-         variant={variant}
-         className={className}
-         >
-            {children}
-         </Button>
-    )
-}
-

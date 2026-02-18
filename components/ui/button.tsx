@@ -10,10 +10,10 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-[var(--color-primary)] text-[var(--color-text-secondary)] font-bold cursor-pointer hover:brightness-90  ",
+          "bg-(--color-primary) text-(--color-text-secondary) font-bold cursor-pointer hover:brightness-90  ",
         secondary:
-          "bg-[var(--color-secondary)] text-[var(--color-text-secondary)] font-bold cursor-pointer hover:brightness-90 ",
-        tertiary: "bg-[var(--color-tertiary)] text-[var(--color-text-secondary)] font-bold cursor-pointer  hover:brightness-90 ",
+          "bg-(--color-secondary) text-(--color-text-secondary) font-bold cursor-pointer hover:brightness-90 ",
+        tertiary: "bg-(--color-tertiary) text-(--color-text-secondary) font-bold cursor-pointer  hover:brightness-90 ",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",

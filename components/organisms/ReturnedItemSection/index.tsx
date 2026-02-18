@@ -1,6 +1,6 @@
 import * as React from "react";
 import { BsBoxSeam, CiCalendar, RxSpeakerLoud } from "@/app/icons";
-import ActionButton from "@/components/atoms/ActionButton";
+import AdvanceButton from "@/components/atoms/AdvanceButton";
 import IconBadge from "@/components/atoms/IconBadge";
 import AmountBreakdown from "@/components/molecules/AmountBreakdown";
 import PaymentHistory from "@/components/molecules/PaymentHistory";
@@ -9,21 +9,21 @@ import TabToggle from "@/components/molecules/TabToggle";
 export default function ReturnedItemSection() {
   return (
     <section className="space-y-6">
-      <div className="rounded-3xl border border-blue-200/60 bg-white/90 p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+      <div className="rounded-3xl border border-(--color-primary-soft) bg-(--color-background) p-6 shadow-(--shadow-panel)">
         <TabToggle tabs={["Active (1)", "Returned (1)"]} activeIndex={1} />
 
-        <div className="mt-6 rounded-3xl border border-emerald-300 bg-emerald-50/80 p-6">
-          <ActionButton className="w-full justify-center rounded-2xl bg-purple-600 px-4 py-2 text-sm font-semibold text-white">
+        <div className="mt-6 rounded-3xl border border-(--color-success-bg) bg-(--color-bg-tertiary) p-6">
+          <AdvanceButton className="w-full justify-center rounded-2xl bg-(--color-secondary) px-4 py-2 text-sm font-semibold text-(--color-text-secondary)">
             <RxSpeakerLoud className="text-base" />
             Hear Details
-          </ActionButton>
+          </AdvanceButton>
 
           <div className="mt-5 flex items-center gap-4">
-            <IconBadge className="h-10 w-10 rounded-full bg-emerald-100 text-emerald-600">
+            <IconBadge className="h-10 w-10 rounded-full bg-(--color-success-bg) text-(--color-text-success)">
               <BsBoxSeam />
             </IconBadge>
             <div>
-              <p className="text-xs text-slate-500">Item</p>
+              <p className="text-xs text-(--color-text-tertiary)">Item</p>
               <p className="text-base font-semibold">test</p>
             </div>
           </div>
@@ -37,25 +37,25 @@ export default function ReturnedItemSection() {
             stillOwes="$10.00"
           />
 
-          <div className="mt-4 flex items-center gap-3 text-sm text-slate-600">
-            <IconBadge className="h-9 w-9 rounded-full bg-emerald-100 text-emerald-600">
+          <div className="mt-4 flex items-center gap-3 text-sm text-(--color-text-tertiary)">
+            <IconBadge className="h-9 w-9 rounded-full bg-(--color-success-bg) text-(--color-text-success)">
               <CiCalendar />
             </IconBadge>
             Returned on 26/01/2026
           </div>
 
           <div className="mt-4 flex flex-wrap gap-3">
-            <ActionButton className="flex flex-1 basis-[180px] items-center justify-center gap-2 rounded-xl bg-orange-600 px-4 py-3 text-sm font-semibold text-white">
+            <AdvanceButton className="flex flex-1 basis-[180px] items-center justify-center gap-2 rounded-xl bg-(--color-text-warning) px-4 py-3 text-sm font-semibold text-(--color-text-secondary)">
               <span>$</span>
               Pay
-            </ActionButton>
-            <ActionButton className="flex flex-1 basis-[180px] items-center justify-center gap-2 rounded-xl bg-emerald-600 px-4 py-3 text-sm font-semibold text-white">
+            </AdvanceButton>
+            <AdvanceButton className="flex flex-1 basis-[180px] items-center justify-center gap-2 rounded-xl bg-(--color-tertiary) px-4 py-3 text-sm font-semibold text-(--color-text-secondary)">
               <span>$</span>
               All Paid
-            </ActionButton>
+            </AdvanceButton>
           </div>
 
-          <div className="mt-4 rounded-2xl bg-emerald-200/70 px-4 py-3 text-center text-sm font-semibold text-emerald-700">
+          <div className="mt-4 rounded-2xl bg-(--color-success-bg) px-4 py-3 text-center text-sm font-semibold text-(--color-text-success)">
             RETURNED
           </div>
         </div>
