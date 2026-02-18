@@ -16,34 +16,34 @@ export default function LendingEmptySection({
 }: LendingEmptySectionProps) {
   return (
     <section className="space-y-6">
-      <SectionHeader
+      {/* <SectionHeader
         icon={<BsBoxSeam className="text-xl" />}
         title="Shop Tracker"
         subtitle="Track your lendings"
         actionLabel="Add New"
         actionIcon={<FaPlus />}
-      />
+      /> */}
 
-      <div className="flex flex-wrap gap-4">
+      {/* <div className="flex flex-wrap gap-4">
         <StatCard
           icon={<HiArrowTrendingUp className="text-xl" />}
           value={active}
           label="Active Lendings"
-          className="basis-[280px] border-[var(--color-warning-bg)] bg-[var(--color-warning-bg)]"
-          iconClassName="bg-[var(--color-secondary-soft)] text-[var(--color-text-warning)]"
-          labelClassName="text-[var(--color-text-warning)]"
+          className="basis-[280px] border-(--color-warning-bg) bg-(--color-warning-bg)"
+          iconClassName="bg-(--color-secondary-soft) text-(--color-text-warning)"
+          labelClassName="text-(--color-text-warning)"
         />
         <StatCard
           icon={<LuCircleCheckBig className="text-xl" />}
           value={returned}
           label="Returned"
-          className="basis-[280px] border-[var(--color-success-bg)] bg-[var(--color-success-bg)]"
-          iconClassName="bg-[var(--color-tertiary-soft)] text-[var(--color-text-success)]"
-          labelClassName="text-[var(--color-text-success)]"
+          className="basis-[280px] border-(--color-success-bg) bg-(--color-success-bg)"
+          iconClassName="bg-(--color-tertiary-soft) text-(--color-text-success)"
+          labelClassName="text-(--color-text-success)"
         />
-      </div>
+      </div> */}
 
-      <div className="rounded-3xl border border-[var(--color-primary-soft)] bg-[var(--color-background)] p-6 shadow-[var(--shadow-panel)]">
+      <div className="rounded-3xl border border-(--color-primary-soft) bg-(--color-background) p-6 shadow-(--shadow-panel)">
         <TabToggle tabs={[`Active (${active})`, `Returned (${returned})`]} activeIndex={0} />
         <EmptyState
           icon={<BsBoxSeam className="text-2xl" />}

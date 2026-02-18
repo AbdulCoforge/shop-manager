@@ -1,25 +1,31 @@
-import * as React from "react";
-import { cn } from "@/lib/utils";
+"use client"
+
+import * as React from "react"
+import { Switch } from "@/components/ui/switch"
 
 interface TabToggleProps {
-  tabs: string[];
-  activeIndex?: number;
+  tabs: string[]
+  activeIndex?: number
+  onTabChange?: (index: number) => void
 }
 
-export default function TabToggle({ tabs, activeIndex = 0 }: TabToggleProps) {
+export default function TabToggle({
+  tabs,
+  activeIndex = 0,
+  onTabChange,
+}: TabToggleProps) {
+  const options = tabs.map((tab, index) => ({
+    label: tab,
+    value: String(index),
+  }))
+
   return (
-    <div className="flex rounded-2xl bg-[var(--color-primary-soft)] p-1 text-sm font-medium text-[var(--color-text-tertiary)]">
-      {tabs.map((tab, index) => (
-        <button
-          key={tab}
-          className={cn(
-            "flex-1 rounded-2xl py-2",
-            index === activeIndex && "bg-[var(--color-background)] shadow"
-          )}
-        >
-          {tab}
-        </button>
-      ))}
-    </div>
-  );
+    <Switch
+      options={options}
+      value={String(activeIndex)}
+      onValueChange={(val) => {
+        onTabChange?.(Number(val))
+      }}
+    />
+  )
 }

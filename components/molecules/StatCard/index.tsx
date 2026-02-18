@@ -12,7 +12,7 @@ interface StatCardProps {
 }
 
 const baseClass =
-  "flex items-center gap-4 rounded-2xl border px-5 py-4 shadow-[var(--shadow-card)]";
+  "flex items-center gap-4 rounded-2xl border px-5 py-4 shadow-(--shadow-card)";
 
 export default function StatCard({
   icon,

@@ -29,25 +29,25 @@ const people = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[var(--color-bg-primary)] text-[var(--color-text-primary)]">
+    <div className="min-h-screen bg-(--color-bg-primary) text-(--color-text-primary)">
       <div className="mx-auto flex max-w-6xl flex-col gap-16 px-6 py-12">
         <PeopleOverviewSection
           stats={{ people: 3, active: 3, returned: 1 }}
           people={people}
         />
 
-        <LendingEmptySection active={0} returned={0} />
+        {/* <LendingEmptySection active={0} returned={0} /> */}
 
-        <PersonDetailSection
+        {/* <PersonDetailSection
           personId={1}
           name="test"
           summary={{ total: "$70.00", paid: "$40.00", remaining: "$30.00" }}
           stats={{ activeItems: 1, returnedItems: 1 }}
-        />
+        /> */}
 
-        <AddLendingModal />
+        {/* <AddLendingModal /> */}
 
-        <ReturnedItemSection />
+        {/* <ReturnedItemSection /> */}
       </div>
     </div>
   );
