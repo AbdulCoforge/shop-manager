@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useEffect, useRef } from "react";
 import {
   BsBoxSeam,
   CiCalendar,
@@ -10,17 +10,32 @@ import {
 import AdvanceButton from "@/components/atoms/AdvanceButton";
 import IconBadge from "@/components/atoms/IconBadge";
 
-export default function AddLendingModal() {
+interface AddLendingModalProps{
+  onClose:()=>void;
+}
+
+export default function AddLendingModal({
+  onClose,
+}: AddLendingModalProps) {
+
+  const crossIconRef = useRef<HTMLButtonElement | null>(null);
+
+  useEffect(() => {
+    crossIconRef.current?.focus();
+  }, []);
+
+const today = new Date().toLocaleString([], { dateStyle: 'long', timeStyle: 'short' });  
+
+
   return (
-    <section className="space-y-6">
-      <div className="rounded-3xl bg-(--color-overlay) p-8">
-        <div className="mx-auto max-w-xl rounded-3xl bg-(--color-background) p-6 shadow-(--shadow-modal)">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+      <div className="w-full max-w-lg rounded-2xl bg-white p-6 shadow-xl">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 text-lg font-semibold">
               <FaPlus className="text-(--color-primary)" />
               Add New Lending
             </div>
-            <span className="text-(--color-text-tertiary)">✕</span>
+            <AdvanceButton className="text-(--color-text-tertiary) cursor-pointer " onClick={onClose} ref={crossIconRef} variant="default" >✕</AdvanceButton>
           </div>
 
           <div className="mt-5 rounded-2xl bg-(--color-bg-primary) p-4">
@@ -71,15 +86,14 @@ export default function AddLendingModal() {
             <IconBadge className="h-8 w-8 rounded-xl bg-(--color-background) text-(--color-secondary)">
               <CiCalendar />
             </IconBadge>
-            Today: 25/01/2026
+            Today: {`${today}`}
           </div>
 
           <AdvanceButton className="mt-6 w-full justify-center rounded-2xl bg-(--color-primary) px-4 py-3 text-sm font-semibold text-(--color-text-secondary)">
             <FaPlus />
             Add Record
           </AdvanceButton>
-        </div>
       </div>
-    </section>
+    </div>
   );
 }

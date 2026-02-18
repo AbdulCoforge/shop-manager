@@ -23,7 +23,7 @@ export default function StatCard({
   labelClassName,
 }: StatCardProps) {
   return (
-    <div className={cn(baseClass, "flex-1", className)}>
+    <div className={cn(baseClass, "flex-1 justify-center items-center", className)}>
       <IconBadge
         className={cn("h-10 w-10 rounded-2xl", iconClassName)}
       >

@@ -9,11 +9,13 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
+        default:"bg-gray-50 backdrop-blur-sm inset-0 z-20 ",
         primary:
-          "bg-(--color-primary) text-(--color-text-secondary) font-bold cursor-pointer hover:brightness-90  ",
+          "bg-(--color-primary) text-(--color-text-secondary) font-bold cursor-pointer hover:brightness-90  focus:border-4 focus:border-double focus:border-white",
         secondary:
-          "bg-(--color-secondary) text-(--color-text-secondary) font-bold cursor-pointer hover:brightness-90 ",
-        tertiary: "bg-(--color-tertiary) text-(--color-text-secondary) font-bold cursor-pointer  hover:brightness-90 ",
+          "bg-(--color-secondary) text-(--color-text-secondary) font-bold cursor-pointer hover:brightness-90 focus:border-4 focus:border-double focus:border-white",
+        tertiary: "bg-(--color-tertiary) text-(--color-text-secondary) font-bold cursor-pointer  hover:brightness-90 focus:border-4 focus:border-double focus:border-white",
+        ghost:"hover:none"
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
