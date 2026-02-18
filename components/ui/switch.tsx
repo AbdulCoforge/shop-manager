@@ -46,7 +46,7 @@ function Switch({
   return (
     <div
       className={cn(
-        "relative inline-flex h-10 w-full rounded-2xl bg-(--color-primary-soft) p-1",
+        "relative inline-flex h-10 w-full rounded-full bg-(--color-primary-soft) p-1",
         className
       )}
     >
@@ -66,7 +66,7 @@ function Switch({
             key={option.value}
             type="button"
             onClick={() => handleSelect(option.value)}
-            className="flex-1 text-center"
+            className="flex-1 text-center cursor-pointer"
           >
             {option.label}
           </button>
