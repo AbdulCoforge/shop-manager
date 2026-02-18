@@ -32,11 +32,13 @@ export default function Home() {
     <div className="min-h-screen bg-(--color-bg-primary) text-(--color-text-primary)">
       <div className="mx-auto flex max-w-6xl flex-col gap-16 px-6 py-12">
         <PeopleOverviewSection
-          stats={{ people: 3, active: 3, returned: 1 }}
+          stats={{ people: 4, active: 3, returned: 1 }}
           people={people}
+          active={4}
+          returned={2}
         />
 
-        {/* <LendingEmptySection active={0} returned={0} /> */}
+        
 
         {/* <PersonDetailSection
           personId={1}
@@ -45,7 +47,6 @@ export default function Home() {
           stats={{ activeItems: 1, returnedItems: 1 }}
         /> */}
 
-        {/* <AddLendingModal /> */}
 
         {/* <ReturnedItemSection /> */}
       </div>

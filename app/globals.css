@@ -66,6 +66,11 @@
   /* Overlay */
   --color-overlay: rgb(0 0 0 / 0.4);
 
+  /* Card Borders */
+  --border-people-card: var(--gray-400);
+  --border-active-card: var(--orange-500);
+  --border-returned-card: var(--green-500);
+
   /* Shadows */
   --shadow-primary: 0 10px 24px rgb(21 92 252 / 0.3);
   --shadow-card: 0 8px 20px rgb(15 23 42 / 0.08);

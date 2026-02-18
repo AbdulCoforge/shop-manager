@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 type AdvanceButtonProps = React.ComponentProps<typeof Button>;
 
 export default function AdvanceButton({
-  variant = "primary",
+  variant,
   className,
   children,
   ...props
