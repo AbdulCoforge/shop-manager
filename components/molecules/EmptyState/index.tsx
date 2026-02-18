@@ -9,12 +9,12 @@ interface EmptyStateProps {
 
 export default function EmptyState({ icon, title, description }: EmptyStateProps) {
   return (
-    <div className="mt-6 flex flex-col items-center justify-center gap-3 rounded-2xl border border-slate-100 bg-white py-16 text-center">
-      <IconBadge className="h-12 w-12 rounded-2xl bg-slate-100 text-slate-400">
+    <div className="mt-6 flex flex-col items-center justify-center gap-3 rounded-2xl border border-[var(--color-primary-soft)] bg-[var(--color-background)] py-16 text-center">
+      <IconBadge className="h-12 w-12 rounded-2xl bg-[var(--color-primary-soft)] text-[var(--color-text-tertiary)]">
         {icon}
       </IconBadge>
-      <h3 className="text-lg font-semibold text-slate-500">{title}</h3>
-      <p className="text-sm text-slate-400">{description}</p>
+      <h3 className="text-lg font-semibold text-[var(--color-text-tertiary)]">{title}</h3>
+      <p className="text-sm text-[var(--color-text-tertiary)]">{description}</p>
     </div>
   );
 }

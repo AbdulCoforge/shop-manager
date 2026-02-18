@@ -51,25 +51,25 @@ export default function PeopleOverviewSection({
           icon={<RiUser3Line className="text-xl" />}
           value={stats.people}
           label="People"
-          className="basis-[220px] border-blue-200 bg-blue-100/70"
-          iconClassName="bg-blue-200 text-blue-700"
-          labelClassName="text-blue-700"
+          className="basis-[220px] border-[var(--color-primary-soft)] bg-[var(--color-bg-primary)]"
+          iconClassName="bg-[var(--color-primary-soft)] text-[var(--color-primary)]"
+          labelClassName="text-[var(--color-primary)]"
         />
         <StatCard
           icon={<HiArrowTrendingUp className="text-xl" />}
           value={stats.active}
           label="Active"
-          className="basis-[220px] border-orange-200 bg-orange-100/70"
-          iconClassName="bg-orange-200 text-orange-700"
-          labelClassName="text-orange-700"
+          className="basis-[220px] border-[var(--color-warning-bg)] bg-[var(--color-warning-bg)]"
+          iconClassName="bg-[var(--color-secondary-soft)] text-[var(--color-text-warning)]"
+          labelClassName="text-[var(--color-text-warning)]"
         />
         <StatCard
           icon={<LuCircleCheckBig className="text-xl" />}
           value={stats.returned}
           label="Returned"
-          className="basis-[220px] border-emerald-200 bg-emerald-100/70"
-          iconClassName="bg-emerald-200 text-emerald-700"
-          labelClassName="text-emerald-700"
+          className="basis-[220px] border-[var(--color-success-bg)] bg-[var(--color-success-bg)]"
+          iconClassName="bg-[var(--color-tertiary-soft)] text-[var(--color-text-success)]"
+          labelClassName="text-[var(--color-text-success)]"
         />
       </div>
 

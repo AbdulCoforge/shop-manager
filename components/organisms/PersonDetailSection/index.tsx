@@ -6,7 +6,7 @@ import {
   RiUser3Line,
   RxSpeakerLoud,
 } from "@/app/icons";
-import ActionButton from "@/components/atoms/ActionButton";
+import AdvanceButton from "@/components/atoms/AdvanceButton";
 import IconBadge from "@/components/atoms/IconBadge";
 import StatCard from "@/components/molecules/StatCard";
 import SummaryTiles from "@/components/molecules/SummaryTiles";
@@ -37,27 +37,27 @@ export default function PersonDetailSection({
   return (
     <section className="space-y-6">
       <div className="flex items-center justify-between">
-        <button className="text-sm text-slate-500">← Back to All People</button>
-        <ActionButton className="rounded-2xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-600/30">
+        <button className="text-sm text-[var(--color-text-tertiary)]">← Back to All People</button>
+        <AdvanceButton className="rounded-2xl bg-[var(--color-primary)] px-6 py-3 text-sm font-semibold text-[var(--color-text-secondary)] shadow-[var(--shadow-primary)]">
           <FaPlus />
           Add Item
-        </ActionButton>
+        </AdvanceButton>
       </div>
 
       <div className="flex items-center gap-4">
-        <div className="relative flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-600 text-white">
+        <div className="relative flex h-12 w-12 items-center justify-center rounded-2xl bg-[var(--color-primary)] text-[var(--color-text-secondary)]">
           <RiUser3Line className="text-xl" />
-          <span className="absolute -right-2 -top-2 rounded-full bg-orange-500 px-2 py-0.5 text-[10px] font-semibold text-white">
+          <span className="absolute -right-2 -top-2 rounded-full bg-[var(--color-text-warning)] px-2 py-0.5 text-[10px] font-semibold text-[var(--color-text-secondary)]">
             #{personId}
           </span>
         </div>
         <div>
           <h2 className="text-xl font-semibold">{name}</h2>
-          <p className="text-sm text-slate-500">Borrowing &amp; Payment History</p>
+          <p className="text-sm text-[var(--color-text-tertiary)]">Borrowing &amp; Payment History</p>
         </div>
       </div>
 
-      <div className="rounded-3xl border border-yellow-300 bg-yellow-100/70 p-6 shadow-[0_12px_30px_rgba(250,204,21,0.2)]">
+      <div className="rounded-3xl border border-[var(--color-warning-bg)] bg-[var(--color-warning-bg)] p-6 shadow-[var(--shadow-warning)]">
         <SummaryTiles
           total={summary.total}
           paid={summary.paid}
@@ -70,38 +70,38 @@ export default function PersonDetailSection({
           icon={<BsBoxSeam className="text-xl" />}
           value={stats.activeItems}
           label="Active Items"
-          className="basis-[260px] border-orange-200 bg-orange-100/70"
-          iconClassName="bg-orange-200 text-orange-700"
-          labelClassName="text-orange-700"
+          className="basis-[260px] border-[var(--color-warning-bg)] bg-[var(--color-warning-bg)]"
+          iconClassName="bg-[var(--color-secondary-soft)] text-[var(--color-text-warning)]"
+          labelClassName="text-[var(--color-text-warning)]"
         />
         <StatCard
           icon={<LuCircleCheckBig className="text-xl" />}
           value={stats.returnedItems}
           label="Returned"
-          className="basis-[260px] border-emerald-200 bg-emerald-100/70"
-          iconClassName="bg-emerald-200 text-emerald-700"
-          labelClassName="text-emerald-700"
+          className="basis-[260px] border-[var(--color-success-bg)] bg-[var(--color-success-bg)]"
+          iconClassName="bg-[var(--color-tertiary-soft)] text-[var(--color-text-success)]"
+          labelClassName="text-[var(--color-text-success)]"
         />
       </div>
 
-      <div className="rounded-3xl border border-blue-200/60 bg-white/90 p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+      <div className="rounded-3xl border border-[var(--color-primary-soft)] bg-[var(--color-background)] p-6 shadow-[var(--shadow-panel)]">
         <TabToggle
           tabs={[`Active (${stats.activeItems})`, `Returned (${stats.returnedItems})`]}
           activeIndex={0}
         />
 
-        <div className="mt-6 rounded-3xl border border-blue-200 bg-blue-50/80 p-6">
-          <ActionButton className="w-full justify-center rounded-2xl bg-purple-600 px-4 py-2 text-sm font-semibold text-white">
+        <div className="mt-6 rounded-3xl border border-[var(--color-primary-soft)] bg-[var(--color-bg-primary)] p-6">
+          <AdvanceButton className="w-full justify-center rounded-2xl bg-[var(--color-secondary)] px-4 py-2 text-sm font-semibold text-[var(--color-text-secondary)]">
             <RxSpeakerLoud className="text-base" />
             Hear Details
-          </ActionButton>
+          </AdvanceButton>
 
           <div className="mt-5 flex items-center gap-4">
-            <IconBadge className="h-10 w-10 rounded-full bg-blue-100 text-blue-600">
+            <IconBadge className="h-10 w-10 rounded-full bg-[var(--color-bg-primary)] text-[var(--color-primary)]">
               <BsBoxSeam />
             </IconBadge>
             <div>
-              <p className="text-xs text-slate-500">Item</p>
+              <p className="text-xs text-[var(--color-text-tertiary)]">Item</p>
               <p className="text-base font-semibold">test</p>
             </div>
           </div>

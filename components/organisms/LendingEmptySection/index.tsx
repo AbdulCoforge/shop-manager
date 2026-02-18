@@ -29,21 +29,21 @@ export default function LendingEmptySection({
           icon={<HiArrowTrendingUp className="text-xl" />}
           value={active}
           label="Active Lendings"
-          className="basis-[280px] border-orange-200 bg-orange-100/70"
-          iconClassName="bg-orange-200 text-orange-700"
-          labelClassName="text-orange-700"
+          className="basis-[280px] border-[var(--color-warning-bg)] bg-[var(--color-warning-bg)]"
+          iconClassName="bg-[var(--color-secondary-soft)] text-[var(--color-text-warning)]"
+          labelClassName="text-[var(--color-text-warning)]"
         />
         <StatCard
           icon={<LuCircleCheckBig className="text-xl" />}
           value={returned}
           label="Returned"
-          className="basis-[280px] border-emerald-200 bg-emerald-100/70"
-          iconClassName="bg-emerald-200 text-emerald-700"
-          labelClassName="text-emerald-700"
+          className="basis-[280px] border-[var(--color-success-bg)] bg-[var(--color-success-bg)]"
+          iconClassName="bg-[var(--color-tertiary-soft)] text-[var(--color-text-success)]"
+          labelClassName="text-[var(--color-text-success)]"
         />
       </div>
 
-      <div className="rounded-3xl border border-blue-200/60 bg-white/90 p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+      <div className="rounded-3xl border border-[var(--color-primary-soft)] bg-[var(--color-background)] p-6 shadow-[var(--shadow-panel)]">
         <TabToggle tabs={[`Active (${active})`, `Returned (${returned})`]} activeIndex={0} />
         <EmptyState
           icon={<BsBoxSeam className="text-2xl" />}

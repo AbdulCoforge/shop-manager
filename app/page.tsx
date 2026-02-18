@@ -29,7 +29,7 @@ const people = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#f3f6ff] text-slate-900">
+    <div className="min-h-screen bg-[var(--color-bg-primary)] text-[var(--color-text-primary)]">
       <div className="mx-auto flex max-w-6xl flex-col gap-16 px-6 py-12">
         <PeopleOverviewSection
           stats={{ people: 3, active: 3, returned: 1 }}
