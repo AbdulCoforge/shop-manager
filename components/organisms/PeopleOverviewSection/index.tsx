@@ -1,3 +1,5 @@
+'use client'
+
 import * as React from "react";
 import {
   BsBoxSeam,
@@ -42,6 +44,10 @@ export default function PeopleOverviewSection({
   active,
   returned,
 }: PeopleOverviewSectionProps) {
+
+
+  const [activeTab, setActiveTab] = React.useState(0);
+
   return (
     <section className="space-y-6">
       <SectionHeader
@@ -87,14 +93,19 @@ export default function PeopleOverviewSection({
       />
 
 
-        <div className="rounded-3xl border border-(--color-primary-soft) bg-(--color-background) p-6 shadow-(--shadow-panel)">
-              <TabToggle tabs={[`Active (${active})`, `Returned (${returned})`]} activeIndex={0} />
-              <EmptyState
-                icon={<BsBoxSeam className="text-2xl" />}
-                title="No Active Lendings"
-                description='Click "Add New" to start tracking'
-              />
-        </div>
+      <div className="rounded-3xl border border-(--color-primary-soft) bg-(--color-background) p-6 shadow-(--shadow-panel)">
+        {/* <TabToggle tabs={[`Active (${active})`, `Returned (${returned})`]} activeIndex={0} /> */}
+        <TabToggle
+          tabs={[`Active (${active})`, `Returned (${returned})`]}
+          activeIndex={activeTab}
+          onTabChange={setActiveTab}   // ✅ now updates
+        />
+        <EmptyState
+          icon={<BsBoxSeam className="text-2xl" />}
+          title="No Active Lendings"
+          description='Click "Add New" to start tracking'
+        />
+      </div>
 
       {/* <div className="space-y-6">
         {people.map((person) => (
