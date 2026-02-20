@@ -1,6 +1,8 @@
+'use client'
 import * as React from "react";
 import AdvanceButton from "@/components/atoms/AdvanceButton";
 import IconBadge from "@/components/atoms/IconBadge";
+import { useAddUserButtonStore } from "@/app/store/addUserStore";
 
 interface SectionHeaderProps {
   icon: React.ReactNode;
@@ -21,6 +23,10 @@ export default function SectionHeader({
   ...props
 }: SectionHeaderProps) {
 
+  const {isAddUserClicked, toggleAddUserClicked} = useAddUserButtonStore();
+  console.log("isAddUserClicked : from top add user button",isAddUserClicked)
+  
+
   return (
     <header className="flex flex-wrap items-center justify-between gap-4">
       <div className="flex items-center gap-3">
@@ -34,7 +40,7 @@ export default function SectionHeader({
       </div>
       <AdvanceButton
         className="rounded-2xl bg-(--color-primary) px-6 py-3 text-sm font-semibold text-(--color-text-secondary) shadow-(--shadow-primary)"
-        onClick={onAction}
+        onClick={toggleAddUserClicked}
       >
         {actionIcon}
         {actionLabel}
