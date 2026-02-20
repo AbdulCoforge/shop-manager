@@ -28,7 +28,7 @@ const today = new Date().toLocaleString([], { dateStyle: 'long', timeStyle: 'sho
 
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
       <div className="w-full max-w-lg rounded-2xl bg-white p-6 shadow-xl">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 text-lg font-semibold">

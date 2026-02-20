@@ -42,7 +42,7 @@ export default function InputField({
       <Input
         type={type}
         className={[
-          "min-w-[220px] flex-1 border-0 bg-transparent px-0 text-sm text-(--color-text-tertiary) shadow-none outline-none focus-visible:ring-0",
+          " flex-1 border-0 bg-transparent px-0 text-sm text-(--color-text-tertiary) shadow-none outline-none focus-visible:ring-0",
           inputClassName,
           className,
         ]

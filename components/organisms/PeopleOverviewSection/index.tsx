@@ -17,6 +17,7 @@ import EmptyState from "@/components/molecules/EmptyState";
 import InputField from "@/components/atoms/InputField";
 import AddLendingModal from "../AddLendingModal";
 import AdvanceButton from "@/components/atoms/AdvanceButton";
+import { useRouter } from "next/navigation";
 
 interface PersonSummary {
   id: number;
@@ -52,8 +53,11 @@ export default function PeopleOverviewSection({
   const [isAddUser, setIsAddUser] = useState<boolean>(false);
   const [selectedTab, setSelectedTab] = useState<"active" | "returned">("active");
 
+  const router = useRouter()
+
   const handleTabClick = (tab: "active" | "returned") => {
     setSelectedTab(tab);
+    router.push(tab)
     console.log("Selected:", tab);
   };
 
@@ -64,16 +68,16 @@ export default function PeopleOverviewSection({
 
   return (
     <section className="space-y-6">
-      <SectionHeader
+      {/* <SectionHeader
         icon={<BsBoxSeam className="text-xl" />}
         title="Shop Tracker"
         subtitle="Track lending by person"
         actionLabel="Add New"
         actionIcon={<FaPlus />}
         onAction={() => setIsAddUser(prev => !prev)}
-      />
+      /> */}
 
-      <div className="flex flex-wrap gap-4">
+      {/* <div className="flex flex-wrap gap-4">
         <StatCard
           icon={<RiUser3Line className="text-xl" />}
           value={stats.people}
@@ -98,57 +102,17 @@ export default function PeopleOverviewSection({
           iconClassName="bg-(--color-tertiary-soft) text-(--color-text-success)"
           labelClassName="text-(--color-text-success)"
         />
-      </div>
+      </div> */}
 
-      <InputField
+      {/* <InputField
         icon={<RiUser3Line className="text-xl" />}
         placeholder="Search by person name or number..."
         actionLabel="Speak"
         actionIcon={<IoIosMic />}
-      />
+      /> */}
 
 
-      <div className="rounded-3xl border border-(--color-primary-soft) bg-(--color-background) p-6 shadow-(--shadow-panel)">
-        {/* <TabToggle tabs={[`Active (${active})`, `Returned (${returned})`]} activeIndex={0} /> */}
-        {/* <TabToggle
-          tabs={[`Active (${active})`, `Returned (${returned})`]}
-          activeIndex={activeTab}
-          onTabChange={setActiveTab}   
-        /> */}
-
-        <div className="w-full h-15 bg-gray-200 flex gap-5 p-1 rounded-xl">
-
-          <AdvanceButton
-            variant="ghost"
-            onClick={() => handleTabClick("active")}
-            className={`cursor-pointer h-full flex-1 ${selectedTab === "active"
-                ? "bg-white text-black font-semibold"
-                : "bg-gray-200 font-semibold"
-              }`}
-          >
-           <HiArrowTrendingUp className="text-3xl font-bold" />  Active (0)
-          </AdvanceButton>
-
-          <AdvanceButton
-            variant="ghost"
-            onClick={() => handleTabClick("returned")}
-            className={`cursor-pointer h-full flex-1 ${selectedTab === "returned"
-                ? "bg-white text-black font-semibold"
-                : "bg-gray-200 font-semibold"
-              }`}
-          >
-           <LuCircleCheckBig className="text-3xl font-bold" />Returned (0)
-          </AdvanceButton>
-
-        </div>
-
-
-        <EmptyState
-          icon={<BsBoxSeam className="text-2xl" />}
-          title="No Active Lendings"
-          description='Click "Add New" to start tracking'
-        />
-      </div>
+   
 
       {isAddUser && <AddLendingModal onClose={() => setIsAddUser(prev => !prev)} />}
 

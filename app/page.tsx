@@ -29,8 +29,8 @@ const people = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-(--color-bg-primary) text-(--color-text-primary)">
-      <div className="mx-auto flex max-w-6xl flex-col gap-16 px-6 py-12">
+    <div className="">
+      <div className="">
         <PeopleOverviewSection
           stats={{ people: 4, active: 3, returned: 1 }}
           people={people}
