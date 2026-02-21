@@ -6,8 +6,9 @@ import SwitchTabs from "../SwitchTabs";
 import AddLendingModal from "@/components/organisms/AddLendingModal";
 import { useAddUserButtonStore } from "@/app/store/addUserStore";
 import { usePathname } from "next/navigation";
+import { ReactNode } from "react";
 
-export default function CardsWithSwitchButtons({children}) {
+export default function CardsWithSwitchButtons({children}: {children: ReactNode}) {
 
     const { isAddUserClicked, toggleAddUserClicked } = useAddUserButtonStore();
 
@@ -22,7 +23,7 @@ export default function CardsWithSwitchButtons({children}) {
     return (
         <div>
 
-            <div className="rounded-3xl border border-(--color-primary-soft) bg-(--color-background) p-6 shadow-(--shadow-panel)">
+            <div className="rounded-3xl border border-(--color-primary-soft) bg-(--color-background) p-6 shadow-(--shadow-panel) border-2 border-(--border-people-card)">
 
                 <SwitchTabs />
 

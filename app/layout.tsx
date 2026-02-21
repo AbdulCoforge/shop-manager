@@ -53,7 +53,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <section className="w-full min-h-screen bg-(--color-bg-primary) text-(--color-text-primary)">
-          <div className="max-w-[1280px] mx-auto flex flex-col px-6 pt-12 pb-6 gap-6">
+          <div className="max-w-[1280px] mx-auto flex flex-col px-6 py-6 gap-6">
             <SectionHeader
               icon={<BsBoxSeam className="text-xl" />}
               title="Shop Tracker"
@@ -92,7 +92,7 @@ export default function RootLayout({
 
             <InputField
               icon={<RiUser3Line className="text-xl" />}
-              placeholder="Search by person name or number..."
+              placeholder="Search by person name..."
               actionLabel="Speak"
               actionIcon={<IoIosMic />}
             />
